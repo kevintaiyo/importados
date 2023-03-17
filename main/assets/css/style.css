@@ -37,11 +37,13 @@ nav a:hover {
     transition: 400ms;
     color: #ffffff;
 }
-
 /********************************************************/
 
 
 /**************************MAIN**************************/
+main{
+    margin-top: 50px;
+}
 
 .row{
     display: flex;
@@ -76,11 +78,10 @@ nav a:hover {
 .categ div{
     padding: 0 10px;
 }
-
 /********************************************************/
 
-/**************************MAIN pagina comprar**************************/
 
+/******************MAIN pagina comprar*******************/
 .comprar-main{
     display: flex;
     justify-content: space-around;
@@ -99,5 +100,47 @@ nav a:hover {
 .monstrar-preco{
     display: flex;
     justify-content: space-around;
+}
+/********************************************************/
+
+
+/****************RESPONSIVIDADE INDEX.HTML***************/
+@media (max-width: 1125px){
+    .cardImg{
+        display: none;
+    }
+
+    .column{
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px){
+    .categ{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categ div{
+        margin-top: 30px;
+    }
+
+    .categ img{
+        width: 200px;
+    }
+
+    .slogan-text{
+        font-size: 23px;
+    }
+
+    header img{
+        width: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    nav a {
+        font-size: 17px;
+    }
 }
 /********************************************************/
