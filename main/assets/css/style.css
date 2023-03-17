@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     background-color: #FFD372;
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /*************************HEADER*************************/
 header {
     height: 126px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,7 +22,6 @@ header img {
 }
 
 header nav {
-    font-family: 'Quicksand', sans-serif;
     font-size: 26px;
     width: 70%;
 
@@ -33,9 +33,71 @@ nav a {
     color: black;
 }
 
-nav a:hover{
+nav a:hover {
     transition: 400ms;
     color: #ffffff;
 }
 
+/********************************************************/
+
+
+/**************************MAIN**************************/
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column, .cardImg{
+    width: 50%;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan-text{
+    font-family: 'Righteous', sans-serif;
+    font-size: 25px;
+}
+
+.letter {
+    color: #F15B40;
+}
+
+.categorias{
+    font-size: 26px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.categ div{
+    padding: 0 10px;
+}
+
+/********************************************************/
+
+/**************************MAIN pagina comprar**************************/
+
+.comprar-main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagem-descricao{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-actions{
+    display: flex;
+    flex-direction: column;
+}
+
+.monstrar-preco{
+    display: flex;
+    justify-content: space-around;
+}
 /********************************************************/
