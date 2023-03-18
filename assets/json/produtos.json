@@ -1,0 +1,40 @@
+{
+    "produtos": [
+        {
+            "img": "assets/img/produtos/produto1.png",
+            "nome": "Vestido de seda estampado",
+            "descricao": "Vestido curto com estampa floral em seda pura",
+            "precoDolar": 350.00
+        },
+        {
+            "img": "assets/img/produtos/produto1.png",
+            "nome": "Terno italiano",
+            "descricao": "Terno completo com corte slim em lã fria italiana",
+            "precoDolar": 1200.00
+        },
+        {
+            "img": "assets/img/produtos/produto1.png",
+            "nome": "Blusa de seda com babados",
+            "descricao": "Blusa de seda com decote em V e babados nas mangas",
+            "precoDolar": 250.00
+        },
+        {
+            "img": "https://via.placeholder.com/350x200",
+            "nome": "Calça jeans de grife",
+            "descricao": "Calça jeans de corte reto com detalhes bordados",
+            "precoDolar": 400.00
+        },
+        {
+            "img": "https://via.placeholder.com/350x200",
+            "nome": "Jaqueta de couro preta",
+            "descricao": "Jaqueta de couro com zíper frontal e acabamento em metal",
+            "precoDolar": 800.00
+        },
+        {
+            "img": "https://via.placeholder.com/350x200",
+            "nome": "Sapato de salto alto",
+            "descricao": "Sapato de salto alto em couro com bico fino",
+            "precoDolar": 350.00
+        }
+    ]
+}

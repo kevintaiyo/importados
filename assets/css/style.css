@@ -9,6 +9,10 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+.row{
+    width: 100%;
+}
+
 /*************************HEADER*************************/
 header {
     height: 126px;
@@ -45,17 +49,17 @@ main{
     margin-top: 50px;
 }
 
-.row{
+.row-main{
     display: flex;
     flex-direction: row;
 }
 
-.column, .cardImg{
+.column-main, .cardImg{
     width: 50%;
     align-items: center;
 }
 
-.column{
+.column-main{
     display: flex;
     flex-direction: column;
 }

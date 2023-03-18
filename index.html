@@ -1,34 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEP e Dolar</title>
-    <style>
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Home</title>
 </head>
 
 <body>
 
+    <header>
+        <img src="assets/img/logo.png" alt="logo">
+        <nav>
+            <a href="">Produtos</a>
+            <a href="">Contato</a>
+            <a href="">Cadastro</a>
+            <a href="">Home</a>
+        </nav>
+    </header>
+
     <main>
-        <div class="cepDiv">
-            <input type="number" placeholder="CEP" id="cep">
-            <button onclick="pesquisa()">Pesquisar</button>
+        <div class="row-main">
+            <div class="column-main">
+                <div class="slogan-text">
+                    <h1>→<span class="letter">E</span>asy To Find</h1>
+                    <h1><span class="letter">A</span>mazing Prices</h1>
+                    <h1><span class="letter">S</span>imple</h1>
+                    <h1><span class="letter">Y</span>our Style←</h1>
+                </div>
+
+                <div class="categorias">
+
+                    <h3>Categorias</h3>
+                    <div class="categ row" style="padding-top: 35px;">
+                        <div>
+                            <a href="">
+                                <img src="assets/img/categorias/imagem1.png" alt="categorias">
+                                <p>Masculino</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="assets/img/categorias/imagem2.png" alt="categorias">
+                                <p>Infantil</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="assets/img/categorias/imagem3.png" alt="categorias">
+                                <p>Feminino</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardImg">
+                <center>
+                    <img src="assets/img/cardImg.png" alt="card">
+                </center>
+            </div>
         </div>
-        <div class="orientacoes">
-            <p>Todas as informações estão contidas no console, <br> no arquivo cep.js possui cep's para teste</p>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap" id="card1-img">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card1-titulo">Card 1</h5>
+                            <p class="card-text" id="card1-descricao">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="compraLoja.html" class="btn btn-primary" onclick="renderiza('botao0')">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap" id="card2-img">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card2-titulo">Card 2</h5>
+                            <p class="card-text" id="card2-descricao">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="compraLoja.html" class="btn btn-primary" onclick="renderiza('botao1')">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap" id="card3-img">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card3-titulo">Card 3</h5>
+                            <p class="card-text" id="card3-descricao">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="compraLoja.html" class="btn btn-primary" onclick="renderiza('botao2')">Button</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <script src="cep.js"></script>
-    <script src="dolar.js"></script>
+    <script src="assets/js/infoProdutos.js"></script>
+    <script src="assets/js/renderizaLoja.js"></script>
+
 </body>
 
 </html>
