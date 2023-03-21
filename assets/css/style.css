@@ -89,11 +89,13 @@ main{
 .comprar-main{
     display: flex;
     justify-content: space-around;
+    padding-top: 125px;
 }
 
 .imagem-descricao{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .user-actions{
@@ -104,6 +106,22 @@ main{
 .monstrar-preco{
     display: flex;
     justify-content: space-around;
+}
+
+.buttons-and-inputs{
+    outline: none;
+    padding: 1em;
+    border-radius: 1.5em;
+}
+
+.comprar{
+    border-radius: 1em;
+    padding: 20px;
+    color: #000;
+}
+
+.comprar:hover{
+    background-color: #F15B40;
 }
 /********************************************************/
 
