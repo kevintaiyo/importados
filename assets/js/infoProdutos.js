@@ -24,14 +24,13 @@ if (window.location.pathname === '/index.html') {
 }
 function renderiza(produto) {
 
-    window.location.href = 'compraLoja.html';
-    console.log(produto);
-    return produto
+    window.location.href = 'compraLoja.html?produto=' + produto;
     
 }
 
 if (window.location.pathname === '/compraLoja.html') {
-    console.log(valor);
+    const params = new URLSearchParams(window.location.search);
+    const produto = params.get('produto');
 
     window.onload = function () {
         fetch("assets/json/produtos.json").then(response => response.json())
@@ -40,9 +39,9 @@ if (window.location.pathname === '/compraLoja.html') {
                 console.log(data);
 
                 //SETANDO AS INFORMAÇÔES
-                // document.getElementById('img').src = data.produtos[produto].img;
-                // document.getElementById('nome').innerHTML = data.produtos[produto].nome;
-                // document.getElementById('descricao').innerHTML = data.produtos[produto].descricao;
+                document.getElementById('img').src = data.produtos[produto].img;
+                document.getElementById('nome').innerHTML = data.produtos[produto].nome;
+                document.getElementById('descricao').innerHTML = data.produtos[produto].descricao;
 
             })
 
