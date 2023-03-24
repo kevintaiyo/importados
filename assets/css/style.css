@@ -82,6 +82,11 @@ main{
 .categ div{
     padding: 0 10px;
 }
+
+.cepDiv input{
+    width: 200px;
+    margin-bottom: 50px;
+}
 /********************************************************/
 
 

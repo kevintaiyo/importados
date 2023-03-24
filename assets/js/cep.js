@@ -6,12 +6,15 @@
 
 function pesquisa() {
     const cep = document.getElementById('cep').value
-    var desconto = 0
+    
+    
+
     fetch(`https://viacep.com.br/ws/${cep}/json/`).then(resposta => {
         return resposta.json();
     }).then(dados => {
         var estado = dados.uf;
         console.log(dados);
+        var desconto;
 
         switch (estado) {
 
@@ -21,7 +24,7 @@ function pesquisa() {
             case 'ES':
             case 'RJ':
                 console.log("Região: SUDESTE - 30% de desconto");
-                return desconto = 0.3;
+                desconto = 0.3;
 
             //CENTRO-OESTE********************
             case 'MS':
@@ -65,5 +68,27 @@ function pesquisa() {
             default:
                 console.log("CEP inválido");
         }
+
+        console.log(desconto);
     })
+
+    
 }
+
+Swal.fire({
+    title: 'Confirmação de compra',
+    text: `Pelo seu CEP vimos que você tem direito a ${desconto}% de desconto, sendo o preco atual de ${document.getElementById('precoReal').value*desconto}`,
+    icon: 'info',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
