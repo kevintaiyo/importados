@@ -2,7 +2,7 @@
 const precoProdutoBRL = 300;
 
 fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
-    return resposta.json(); 
+    return resposta.json();
 }).then(economia => {
     var dolar = economia.USDBRL.bid;
     const precoProdutoUSD = precoProdutoBRL * dolar;

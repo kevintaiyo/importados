@@ -4,16 +4,9 @@
 * {
     padding: 0;
     margin: 0;
+    background-color: #FFD372;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
-}
-
-body{
-    background-color: #FFD372;
-    background-repeat:no-repeat ;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .row{
@@ -35,10 +28,9 @@ header img {
 header nav {
     font-size: 26px;
     width: 70%;
+
     display: flex;
     justify-content: space-around;
-    padding-left: 200px;
-    text-decoration: none;
 }
 
 nav a {
@@ -52,7 +44,7 @@ nav a:hover {
 /********************************************************/
 
 
-/**************************MAIN INDEX**************************/
+/**************************MAIN**************************/
 main{
     margin-top: 50px;
 }
@@ -63,7 +55,7 @@ main{
 }
 
 .column-main, .cardImg{
-    width: 80%;
+    width: 50%;
     align-items: center;
 }
 
@@ -74,19 +66,7 @@ main{
 
 .slogan-text{
     font-family: 'Righteous', sans-serif;
-    font-size: 30px;
-}
-
-.frase2{
-    padding-left: 80px;
-}
-
-.frase3{
-    padding-left: 60px;
-}
-
-.frase4{
-    padding-left: 80px;
+    font-size: 25px;
 }
 
 .letter {
@@ -97,79 +77,34 @@ main{
     font-size: 26px;
     text-align: center;
     margin-top: 100px;
-    justify-content: space-around;
 }
 
+.categ div{
+    padding: 0 10px;
+}
 /********************************************************/
 
 
 /******************MAIN pagina comprar*******************/
 .comprar-main{
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 1px;
+    justify-content: space-around;
 }
 
-.imagem-descricao-produto{
+.imagem-descricao{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-right: 100px;
-}
-
-.card{
-    padding: 100px;
-    border-radius: 5px;
-    color: #000000;
-    display: flex;
-    flex-direction: row;
-}
-
-fieldset{
-    border:2px solid #ca992f;
 }
 
 .user-actions{
     display: flex;
     flex-direction: column;
-    padding-right: 80px;
-    padding-bottom: 20px;
 }
 
-.buttons-and-inputs{
-    outline: none;
-    padding: 1em;
-    border-radius: 1em;
-    border: none;
-    background-color: #e9bd60;
-    width:200px ;
+.monstrar-preco{
+    display: flex;
+    justify-content: space-around;
 }
-
-.comprar{
-    border-radius: 1em;
-    padding: 20px;
-    color: #000;
-    border: none;
-}
-
-.comprar:hover{
-    background-color: #F15B40;
-}
-
-.informacoes{
-    padding-top: 20px;
-    flex-direction: row;
-    align-items: center;
-}
-
-.legend-produtos{
-    font-size: 13px;
-}
-
-.area-compra{
-    background-image: url("../img/img-backgrounds/Rectagle3.png.png");
-}
-
 /********************************************************/
 
 

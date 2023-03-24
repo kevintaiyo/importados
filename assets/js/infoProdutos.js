@@ -22,6 +22,7 @@ if (window.location.pathname === '/index.html') {
             })
     }
 }
+
 function renderiza(produto) {
 
     window.location.href = 'compraLoja.html?produto=' + produto;
@@ -37,11 +38,13 @@ if (window.location.pathname === '/compraLoja.html') {
             .then(data => {
 
                 console.log(data);
+                console.log(produto);
 
                 //SETANDO AS INFORMAÇÔES
                 document.getElementById('img').src = data.produtos[produto].img;
                 document.getElementById('nome').innerHTML = data.produtos[produto].nome;
                 document.getElementById('descricao').innerHTML = data.produtos[produto].descricao;
+                document.getElementById('precoDolar').innerHTML = data.produtos[produto].precoDolar + " USD";
 
             })
 
