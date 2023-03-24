@@ -52,7 +52,7 @@ nav a:hover {
 /********************************************************/
 
 
-/**************************MAIN**************************/
+/**************************MAIN INDEX**************************/
 main{
     margin-top: 50px;
 }
@@ -74,7 +74,19 @@ main{
 
 .slogan-text{
     font-family: 'Righteous', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+.frase2{
+    padding-left: 80px;
+}
+
+.frase3{
+    padding-left: 60px;
+}
+
+.frase4{
+    padding-left: 80px;
 }
 
 .letter {
@@ -85,11 +97,9 @@ main{
     font-size: 26px;
     text-align: center;
     margin-top: 100px;
+    justify-content: space-around;
 }
 
-.categ div{
-    padding: 0 10px;
-}
 /********************************************************/
 
 
@@ -122,13 +132,8 @@ fieldset{
 .user-actions{
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
     padding-right: 80px;
-}
-
-.monstrar-preco{
-    display: flex;
-    justify-content: space-around;
+    padding-bottom: 20px;
 }
 
 .buttons-and-inputs{
@@ -137,6 +142,7 @@ fieldset{
     border-radius: 1em;
     border: none;
     background-color: #e9bd60;
+    width:200px ;
 }
 
 .comprar{
@@ -151,8 +157,13 @@ fieldset{
 }
 
 .informacoes{
+    padding-top: 20px;
     flex-direction: row;
     align-items: center;
+}
+
+.legend-produtos{
+    font-size: 13px;
 }
 
 .area-compra{

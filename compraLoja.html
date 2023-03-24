@@ -22,51 +22,29 @@
             <div class="comprar-main">
                 <fieldset class="card">
                     <div class="imagem-descricao-produto">
-                        <img width="300px" src="assets/img/produtos/produto1.png" alt=""><!-- imagen e descrição do produto nesta div -->
+                        <img width="300px" src="assets/img/produtos/produto1.png" alt="produtoImagens"><!-- imagen e descrição do produto nesta div -->
                         <div class="informacoes">               
                             <div id="nome">A</div>
                             <div id="descricao">B</div>
                             <div id="precoDolar">C</div>   
                         </div>
-                    </div>
-            
+                    </div>           
                     <div class="user-actions">
-                        <div class="cep">
-                            <input class="buttons-and-inputs" type="text" placeholder="Digite seu CEP"><br><br><!-- input para o usuario digitar seu cep -->
-                        </div>
-                        <div class="mostrar-preco">
-                            <input class="buttons-and-inputs" type="text" placeholder="Preco reais" readonly><!-- input para conferir os preço do produto em reais -->
-                            <input class="buttons-and-inputs"type="text" placeholder="Preco dollar" readonly><br><br><!-- input para conferir os preço do produto em dollares -->
-                        </div>
-                        <div class="mostrar-quantidade-tamanho">
-                            <input class="buttons-and-inputs"type="number" placeholder="Quantidade"><!-- input para conferir os preço de acordo com quantidade -->
-                            <input class="buttons-and-inputs"type="text" placeholder="Tamanho"><br><br><!-- input para conferir os preço do produto em dollares -->
-                        </div>
-                        <div>
-                            <button class="comprar">Comprar</button><!-- button para fechar a compra -->
-                        </div>
-                        <div>
-            
-                        </div>
+                        <label class="legend-produtos">Digite seu cep:</label>
+                        <input class="buttons-and-inputs" type="text"><br><!-- input para o usuario digitar seu cep -->
+                        <label class="legend-produtos">Preço em R$:</label>
+                        <input class="buttons-and-inputs" type="text" readonly><br><!-- input para conferir os preço do produto em reais -->
+                        <label class="legend-produtos">Preço em Dollar:</label>
+                        <input class="buttons-and-inputs"type="text" readonly><br><!-- input para conferir os preço do produto em dollares -->  
+                        <label class="legend-produtos">Quantidade:</label>
+                        <input class="buttons-and-inputs"type="number"><br><!-- input para conferir os preço de acordo com quantidade -->
+                        <label class="legend-produtos">Tamanho da Roupa:</label>
+                        <input class="buttons-and-inputs"type="text"><br><!-- input para conferir os preço do produto em dollares -->  
+                        <button class="comprar">Comprar</button><!-- button para fechar a compra -->
                     </div>
                 </fieldset>
             </div>
-            <div class="mostrar-preco">
-                <input class="buttons-and-inputs" type="text" placeholder="Preco reais"><!-- input para conferir os preço do produto em reais -->
-                <input class="buttons-and-inputs"type="text" placeholder="Preco dollar"><br><br><!-- input para conferir os preço do produto em dollares -->
-            </div>
-            <div class="mostrar-quantidade-tamanho">
-                <input class="buttons-and-inputs"type="text" placeholder="Quantidade"><!-- input para conferir os preço de acordo com quantidade -->
-                <input class="buttons-and-inputs"type="text" placeholder="Tamanho"><br><br><!-- input para conferir os preço do produto em dollares -->
-            </div>
-            <div>
-                <button class="comprar">Comprar</button><!-- button para fechar a compra -->
-            </div>
-            <div>
-
-            </div>
-        </div>
-    </main>
+        </main>
     <script src="assets/js/infoProdutos.js"></script>
 </body>
 </html>
