@@ -26,7 +26,7 @@ if (window.location.pathname === '/index.html') {
 function renderiza(produto) {
 
     window.location.href = 'compraLoja.html?produto=' + produto;
-    
+
 }
 
 if (window.location.pathname === '/compraLoja.html') {
@@ -46,7 +46,18 @@ if (window.location.pathname === '/compraLoja.html') {
                 document.getElementById('descricao').innerHTML = data.produtos[produto].descricao;
                 document.getElementById('precoDolar').innerHTML = data.produtos[produto].precoDolar + " USD";
 
+                //SETANDO AS INFORMAÇÔES DE REAIS
+                fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
+                    return resposta.json();
+                }).then(economia => {
+                    var dolar = economia.USDBRL.bid;
+                    document.getElementById('precoReal').innerHTML = (data.produtos[produto].precoDolar * dolar).toFixed(2) + " BRL";
+
+                })
+
             })
 
     }
 }
+
+
