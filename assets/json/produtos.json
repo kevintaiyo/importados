@@ -1,21 +1,21 @@
 {
     "produtos": [
         {
-            "img": "assets/img/produtos/produto1.png",
+            "img": "assets/img/produtos/produto1.jpg",
             "nome": "Vestido de seda estampado",
             "descricao": "Vestido curto com estampa floral em seda pura",
             "precoDolar": 350.00
         },
         {
-            "img": "assets/img/produtos/produto1.png",
+            "img": "assets/img/produtos/produto2.webp",
             "nome": "Terno italiano",
             "descricao": "Terno completo com corte slim em lã fria italiana",
             "precoDolar": 1200.00
         },
         {
-            "img": "assets/img/produtos/produto1.png",
+            "img": "assets/img/produtos/produto3.jpg",
             "nome": "Blusa de seda com babados",
-            "descricao": "Blusa de seda com decote em V e babados nas mangas",
+            "descricao": "Blusa de seda com decote em V e babados",
             "precoDolar": 250.00
         },
         {

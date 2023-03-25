@@ -4,9 +4,12 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #FFD372;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    background-color: #FFD372;
 }
 
 .row{
@@ -87,6 +90,11 @@ main{
     width: 200px;
     margin-bottom: 50px;
 }
+
+.card-img-top{
+    height: 500px;
+    width: 100%;
+}
 /********************************************************/
 
 
@@ -110,6 +118,27 @@ main{
 .monstrar-preco{
     display: flex;
     justify-content: space-around;
+}
+
+#img{
+    width: 300px;
+    height: 350px;
+}
+
+#btn{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border-radius: 7px;
+}
+
+#btn:hover{
+    transition: 300ms;
+    background-color: white;
+    color: orange;
 }
 /********************************************************/
 
