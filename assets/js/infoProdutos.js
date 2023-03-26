@@ -60,7 +60,7 @@ function precoUrl(preco) {
     //Incrementando o preco fornecido na URL
     const url = new URL(window.location.href);
     url.searchParams.set('precoReais', preco);
-    
+
     //Serve para a pagina parar de ficar resetando infinitamente
-    history.pushState(null, null, url);
+    history.pushState(null, null, url); 
 }

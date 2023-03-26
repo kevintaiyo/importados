@@ -5,13 +5,9 @@
 // CEP Centro-Oeste - 70650171
 // CEP Norte - 67013218
 
-//Resgatando o preco em reais do produto pela URL
-const params = new URLSearchParams(window.location.search);
-const precoReaisValor = params.get('precoReais');
-
 var desconto;
 
-function pesquisa() {
+function pesquisa() {    
     const cep = document.getElementById('cep').value
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`).then(resposta => {
@@ -20,7 +16,7 @@ function pesquisa() {
         console.log(dados);
 
         var estado = dados.uf;
-        
+
         //Verificando a região do cep e aplicando um desconto
         switch (estado) {
 
@@ -77,10 +73,10 @@ function pesquisa() {
                 break;
         }
 
-        //Confirmação da compra
-        confirmaCompra()
+        var precoReaisValor = resgataValorReal() //Recebe o valor que sera usado na funcao abaixo
+        confirmaCompra(precoReaisValor)  //Confirmação da compra
 
-    }).catch(function (erro) { 
+    }).catch(function (erro) {
         console.log(erro);
         Swal.fire({
             icon: 'error',
@@ -96,7 +92,8 @@ function pesquisa() {
     Mostra o valor integral do produto, o desconto e o preco com desconto 
     Biblioteca SweetAlert    
 */
-function confirmaCompra(){
+function confirmaCompra(precoReaisValor) {
+    console.log(precoReaisValor);
     Swal.fire({
         title: 'Confirmação de compra',
         text: `Pelo seu CEP vimos que você tem direito a ${(desconto * 100).toFixed(0)}% de desconto, sendo o preço de ${precoReaisValor}R$ para ${(precoReaisValor * (1 - desconto)).toFixed(2)}R$`,
@@ -113,4 +110,12 @@ function confirmaCompra(){
             )
         }
     })
+}
+
+function resgataValorReal() {
+
+    //Resgatando o preco em reais do produto pela URL
+    const params = new URLSearchParams(window.location.search);
+    const precoReaisValor = params.get('precoReais');
+    return precoReaisValor
 }
