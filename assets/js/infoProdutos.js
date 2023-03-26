@@ -1,26 +1,23 @@
+//IMPRIME AS INFORMAÇÕES DOS CARDS DOS PRODUTOS NO INDEX.HTML
+//ESSAS INFORMAÇÕES ESTÃO SALVAS NO ARQUIVO PRODUTOS.JSON
 if (window.location.pathname === '/index.html') {
     window.onload = function () {
         fetch("assets/json/produtos.json").then(response => response.json())
             .then(data => {
-                //SETANDO IMAGENS
-                document.getElementById('card1-img').src = data.produtos[0].img;
-                document.getElementById('card2-img').src = data.produtos[1].img;
-                document.getElementById('card3-img').src = data.produtos[2].img;
 
-                //SETANDO TITULOS
-                document.getElementById('card1-titulo').innerHTML = data.produtos[0].nome;
-                document.getElementById('card2-titulo').innerHTML = data.produtos[1].nome;
-                document.getElementById('card3-titulo').innerHTML = data.produtos[2].nome;
+                quantidadeDeProdutos = data.produtos.length
 
-                //SETANDO DESCRICOES
-                document.getElementById('card1-descricao').innerHTML = data.produtos[0].descricao;
-                document.getElementById('card2-descricao').innerHTML = data.produtos[1].descricao;
-                document.getElementById('card3-descricao').innerHTML = data.produtos[2].descricao;
+                //SETANDO IMAGENS, TITULOS E DESCRIÇÕES
+                for (x = 0; x < quantidadeDeProdutos; x++) {
+                    document.getElementById(`card${x+1}-img`).src = data.produtos[x].img;
+                    document.getElementById(`card${x+1}-titulo`).innerHTML = data.produtos[x].nome;
+                    document.getElementById(`card${x+1}-descricao`).innerHTML = data.produtos[x].descricao;
+                }
             })
     }
 }
 
-//Recebe o "id" do botão do card pressionado e coloca na url 
+//Recebe o "id" do botão do card pressionado e coloca na url que se é redirecionado
 function renderiza(produto) {
     window.location.href = 'compraLoja.html?produto=' + produto
 }
@@ -53,9 +50,7 @@ if (window.location.pathname === '/compraLoja.html') {
                     precoUrl(precoReais);
 
                 })
-
             })
-
     }
 }
 
