@@ -12,6 +12,7 @@ if (window.location.pathname === '/index.html') {
                     document.getElementById(`card${x+1}-img`).src = data.produtos[x].img;
                     document.getElementById(`card${x+1}-titulo`).innerHTML = data.produtos[x].nome;
                     document.getElementById(`card${x+1}-descricao`).innerHTML = data.produtos[x].descricao;
+                    document.getElementById(`card${x+1}-dolarValor`).innerHTML = data.produtos[x].precoDolar + " USD";
                 }
             }
         )

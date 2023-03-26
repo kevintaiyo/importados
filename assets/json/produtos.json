@@ -2,7 +2,7 @@
     "produtos": [
         {
             "img": "assets/img/produtos/produto1.jpg",
-            "nome": "Vestido de seda estampado",
+            "nome": "Vestido estampado",
             "descricao": "Vestido curto com estampa floral em seda pura",
             "precoDolar": 350.00
         },
@@ -14,7 +14,7 @@
         },
         {
             "img": "assets/img/produtos/produto3.jpg",
-            "nome": "Blusa de seda com babados",
+            "nome": "Blusa babados",
             "descricao": "Blusa de seda com decote em V e babados",
             "precoDolar": 250.00
         }
