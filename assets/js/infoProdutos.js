@@ -13,7 +13,8 @@ if (window.location.pathname === '/index.html') {
                     document.getElementById(`card${x+1}-titulo`).innerHTML = data.produtos[x].nome;
                     document.getElementById(`card${x+1}-descricao`).innerHTML = data.produtos[x].descricao;
                 }
-            })
+            }
+        )
     }
 }
 
@@ -23,7 +24,7 @@ function renderiza(produto) {
 }
 
 if (window.location.pathname === '/compraLoja.html') {
-
+    
     //Pega o numero do produto escolhido pelo usuario que fica na url
     const params = new URLSearchParams(window.location.search);
     const produto = params.get('produto');
@@ -38,7 +39,7 @@ if (window.location.pathname === '/compraLoja.html') {
                 document.getElementById('descricao').innerHTML = data.produtos[produto].descricao;
                 document.getElementById('precoDolar').innerHTML = data.produtos[produto].precoDolar + " USD";
 
-                //SETANDO AS INFORMAÇÔES DE PREÇO REAIS - API
+                //SETANDO PREÇO DO PRODUTO EM REAIS - API
                 fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
                     return resposta.json();
                 }).then(economia => {
@@ -50,7 +51,8 @@ if (window.location.pathname === '/compraLoja.html') {
                     precoUrl(precoReais);
 
                 })
-            })
+            }
+        )
     }
 }
 
@@ -58,5 +60,7 @@ function precoUrl(preco) {
     //Incrementando o preco fornecido na URL
     const url = new URL(window.location.href);
     url.searchParams.set('precoReais', preco);
+    
+    //Serve para a pagina parar de ficar resetando infinitamente
     history.pushState(null, null, url);
 }

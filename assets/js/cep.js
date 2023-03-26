@@ -9,16 +9,18 @@
 const params = new URLSearchParams(window.location.search);
 const precoReaisValor = params.get('precoReais');
 
+var desconto;
+
 function pesquisa() {
     const cep = document.getElementById('cep').value
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`).then(resposta => {
         return resposta.json();
     }).then(dados => {
-        var estado = dados.uf;
         console.log(dados);
-        var desconto;
 
+        var estado = dados.uf;
+        
         //Verificando a região do cep e aplicando um desconto
         switch (estado) {
 
@@ -71,29 +73,15 @@ function pesquisa() {
             case 'AL':
             case 'SE':
                 console.log("Região: NORDESTE - 7% de desconto");
-                return desconto = 0.07;
+                desconto = 0.07;
+                break;
         }
 
-        //Confirmação da compra - Mostra o valor integral do produto, o desconto e o preco com desconto - Biblioteca SweetAlert
-        Swal.fire({
-            title: 'Confirmação de compra',
-            text: `Pelo seu CEP vimos que você tem direito a ${desconto * 100}% de desconto, sendo o preco de ${precoReaisValor} para ${(precoReaisValor * (1 -desconto)).toFixed(2)}`,
-            icon: 'info',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Confirmar Compra!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Compra Confirmada',
-                    `Você acaba de adquirir o produto ${document.getElementById('nome').value} no valor de  ${(precoReaisValor * (1 - desconto)).toFixed(2)}`,
-                )
-            }
-        })
+        //Confirmação da compra
+        confirmaCompra()
 
     }).catch(function (erro) { 
-        //
+        console.log(erro);
         Swal.fire({
             icon: 'error',
             title: "CEP não reconhecido",
@@ -101,4 +89,28 @@ function pesquisa() {
         })
         document.getElementById('cep').value = ''
     });
+}
+
+
+/*  Confirmação da compra 
+    Mostra o valor integral do produto, o desconto e o preco com desconto 
+    Biblioteca SweetAlert    
+*/
+function confirmaCompra(){
+    Swal.fire({
+        title: 'Confirmação de compra',
+        text: `Pelo seu CEP vimos que você tem direito a ${(desconto * 100).toFixed(0)}% de desconto, sendo o preço de ${precoReaisValor}R$ para ${(precoReaisValor * (1 - desconto)).toFixed(2)}R$`,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmar Compra!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Compra Confirmada',
+                `Você acaba de realizar uma compra no valor de ${(precoReaisValor * (1 - desconto)).toFixed(2)}R$`,
+            )
+        }
+    })
 }
