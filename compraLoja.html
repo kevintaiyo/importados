@@ -20,35 +20,70 @@
             <a href="">Meu Carrinho</a>
         </nav>
     </header>
+
     <main>
-        <div class="comprar-main">
-            <fieldset class="card">
-                <div class="imagem-descricao-produto">
-                    <center>
-                        <img id="img" width="300px" src="" alt="produtoImagens">
-                    </center>
-                    <div class="informacoes">
-                        <div id="nome">Produto</div>
-                        <div id="descricao">Descrição</div>
-                        <div id="precoDolar">Preço Dolar</div>
-                        <div id="precoReal">Preço Real</div>
-                    </div>
+        <div class="produtoSelecionado">
+            <div class="fotoProduto">
+                <img src="assets/img/produtos/produto1.jpg" id="img" alt="Foto do Produto">
+            </div>
+            <div class="informacoesProduto">
+                <div class="nome">
+                    <h3 id="nome">Nome do Produto</h3>
                 </div>
-                <div class="user-actions">
-                    <div class="cepDiv">
-                        <label for="">CEP</label>
-                        <input type="number" max="8" min="8" id="cep">
-                    </div>
-                    <button onclick="pesquisa()" id="btn"
-                        class="comprar">Comprar</button><!-- button para fechar a compra -->
+                <div id="descricao">Descrição do Produto</div>
+                <div class="precos">
+                    <div id="precoDolar">Preço Dolar</div>
+                    <div id="precoReal">Preço Real</div>
                 </div>
-            </fieldset>
+                <div class="tamanho">
+                    <p>Tamanhos:</p>
+                    <div class="tamanhos">P</div>
+                    <div class="tamanhos">M</div>
+                    <div class="tamanhos">G</div>
+                    <div class="tamanhos">GG</div>
+                </div>
+                <div class="CEPCompra">
+                    <div>
+                        <label for="">CEP:&nbsp;</label>
+                        <input type="number" max="8" id="cep" maxlength="8" required placeholder="ex. 12345678">
+                    </div>
+
+                    <button onclick="pesquisa()" id="btn" class="comprar">Comprar</button>
+                </div>
+            </div>
         </div>
     </main>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="assets/js/infoProdutos.js"></script>
     <script src="assets/js/cep.js"></script>
+
+    <script>
+        const tamanhos = document.querySelectorAll('.tamanhos');
+
+        function selecionarTamanho() {
+            // Alterna a classe 'selecionado' na div de tamanho clicada
+            this.classList.toggle('selecionado');
+
+            // Remove a classe 'selecionado' de todas as outras divs de tamanho
+            for (let i = 0; i < tamanhos.length; i++) {
+                /*
+                    Para remover a classe 'selecionado' a div
+                    nao pode ser a que o user acabou de clicar
+                    e tem que possuir a div 'selecionado'
+                */
+                if (tamanhos[i] !== this && tamanhos[i].classList.contains('selecionado')) {
+                    tamanhos[i].classList.remove('selecionado');
+                }
+            }
+        }
+
+        //Atribuindo a funcao selecionarTamanho para as divs
+        for (let i = 0; i < tamanhos.length; i++) {
+            tamanhos[i].addEventListener('click', selecionarTamanho);
+        }
+    </script>
 </body>
 
 </html>
