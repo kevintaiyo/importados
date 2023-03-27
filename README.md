@@ -1,5 +1,6 @@
 <h1 align="center">Loja de Importados</h1>
-Projeto final da disciplina de JavaScript simulando um ecommerce onde é consumido APIs de CEP (para descontos) e Dolar, para conversão de moedas.
+Projeto final da disciplina de JavaScript <br>
+simulando um ecommerce onde é consumido APIs de CEP (para descontos) e Dolar, para conversão de moedas.
 
 ## 🤝 Colaboradores
 
