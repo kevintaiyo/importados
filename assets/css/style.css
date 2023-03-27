@@ -45,6 +45,9 @@ nav a:hover {
     color: #ffffff;
 }
 
+nav{
+    padding-left: 200px;
+}
 /********************************************************/
 
 
@@ -299,6 +302,17 @@ main {
     width: 20px;
 }
 
+.frase2{
+    padding-left: 80px;
+}
+
+.frase3{
+   padding-left: 40px;
+}
+
+.frase4{
+    padding-left: 80px;
+}
 /********************************************************/
 
 main {
