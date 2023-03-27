@@ -45,8 +45,12 @@ nav a:hover {
     color: #ffffff;
 }
 
+a{
+    text-decoration: none
+}
+
 nav{
-    padding-left: 200px;
+    padding-left: 100px;
 }
 /********************************************************/
 
@@ -76,7 +80,7 @@ main {
 
 .slogan-text {
     font-family: 'Righteous', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .letter {
@@ -110,6 +114,14 @@ main {
     justify-content: space-around;
 }
 
+div a{
+    color: #1b2741;
+}
+
+div a:hover {
+    transition: 400ms;
+    color: #ffffff;
+}
 /********************************************************/
 
 
@@ -439,3 +451,27 @@ main {
         padding-left: 0;
     }
 }
+
+@media (max-width: 1000px) {
+    .alinha{
+     display: flex;
+     flex-direction: column;
+    }
+ }
+ 
+ @media (max-width: 1200px) {
+     nav{
+        flex-wrap: wrap;
+     }
+ }
+ 
+ @media (max-width: 900px) {
+     nav div a{
+        display: none;
+     }
+     .burguer-menu{
+         display: block;
+         align-items: center;
+     }
+ 
+ }
