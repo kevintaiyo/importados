@@ -2,7 +2,7 @@
 //ESSAS INFORMAÇÕES ESTÃO SALVAS NO ARQUIVO PRODUTOS.JSON
 if (window.location.pathname === '/index.html') {
     window.onload = function () {
-        fetch("assets/json/produtos.json").then(response => response.json())
+        fetch("https://kauamoreno.github.io/importados/assets/json/produtos.json").then(response => response.json())
             .then(data => {
 
                 quantidadeDeProdutos = data.produtos.length
@@ -31,7 +31,7 @@ if (window.location.pathname === '/compraLoja.html') {
     const produto = params.get('produto');
 
     window.onload = function () {
-        fetch("assets/json/produtos.json").then(response => response.json())
+        fetch("https://kauamoreno.github.io/importados/assets/json/produtos.json").then(response => response.json())
             .then(data => {
 
                 //SETANDO AS INFORMAÇÔES ESTÁTICAS DO PRODUTO
