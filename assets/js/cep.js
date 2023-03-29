@@ -7,7 +7,7 @@
 
 var desconto;
 
-function pesquisa() {    
+function pesquisa() {
     const cep = document.getElementById('cep').value
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`).then(resposta => {
@@ -25,9 +25,16 @@ function pesquisa() {
             case 'MG':
             case 'ES':
             case 'RJ':
-                console.log("Região: SUDESTE - 30% de desconto");
-                desconto = 0.3;
-                break;
+                if (dados.localidade == 'Mogi das Cruzes') {
+                    console.log('mogi')
+                    desconto = 1;
+                    break;
+                } else {
+                    console.log("Região: SUDESTE - 30% de desconto");
+                    desconto = 0.3;
+                    break;
+                }
+
 
             //CENTRO-OESTE********************
             case 'MS':
@@ -96,7 +103,7 @@ function confirmaCompra(precoReaisValor) {
     console.log(precoReaisValor);
     Swal.fire({
         title: 'Confirmação de compra',
-        text: `Pelo seu CEP vimos que você tem direito a ${(desconto * 100).toFixed(0)}% de desconto, sendo o preço de ${precoReaisValor}R$ para ${(precoReaisValor * (1 - desconto)).toFixed(2)}R$`,
+        text: `Pelo seu CEP vimos que você tem direito a ${(desconto * 100).toFixed(0)}% de desconto no frete de 1000 R$, sendo o preço de ${precoReaisValor}R$ para ${(parseFloat(precoReaisValor) + (parseFloat(1 - desconto) * 1000)).toFixed(2)}R$`,
         icon: 'info',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -106,7 +113,7 @@ function confirmaCompra(precoReaisValor) {
         if (result.isConfirmed) {
             Swal.fire(
                 'Compra Confirmada',
-                `Você acaba de realizar uma compra no valor de ${(precoReaisValor * (1 - desconto)).toFixed(2)}R$`,
+                `Você acaba de realizar uma compra no valor de ${precoReaisValor}R$ para ${(precoReaisValor + (1 - desconto * 1000)).toFixed(2)}R$`,
             )
         }
     })
