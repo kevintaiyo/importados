@@ -52,6 +52,23 @@ a{
 nav{
     padding-left: 100px;
 }
+
+footer{
+    padding: 50px 0 20px 0;
+    color: black;
+    font-size: 25px;
+}
+
+footer a {
+    color: black;
+    font-weight: bold;
+}
+
+footer a:hover {
+    transition: 300ms;
+    color: #f67034;
+    
+}
 /********************************************************/
 
 
