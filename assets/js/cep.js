@@ -79,6 +79,15 @@ function pesquisa() {
                 console.log("Região: NORDESTE - 7% de desconto");
                 desconto = 0.07;
                 break;
+
+            default:
+                console.log(erro);
+                Swal.fire({
+                    icon: 'error',
+                    title: "CEP não reconhecido",
+                    text: 'Insira um cep existente!',
+                })
+                document.getElementById('cep').value = ''
         }
 
         var precoReaisValor = resgataValorReal() //Recebe o valor que sera usado na funcao abaixo
