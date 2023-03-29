@@ -462,6 +462,7 @@ main {
  @media (max-width: 1200px) {
      nav{
         flex-wrap: wrap;
+        font-size: 20px;
      }
  }
  
