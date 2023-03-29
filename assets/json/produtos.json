@@ -17,6 +17,24 @@
             "nome": "Blusa babados",
             "descricao": "Blusa de seda com decote em V e babados",
             "precoDolar": 250.00
+        },
+        {
+            "img": "assets/img/produtos/produto4.webp",
+            "nome": "Jaqueta de couro",
+            "descricao": "Jaqueta de couro com acabamento em zíper",
+            "precoDolar": 800.00
+        },
+        {
+            "img": "assets/img/produtos/produto5.jpg",
+            "nome": "Calça jeans",
+            "descricao": "Calça jeans azul com corte largo com sinos",
+            "precoDolar": 80.00
+        },
+        {
+            "img": "assets/img/produtos/produto6.webp",
+            "nome": "Sapato social",
+            "descricao": "Sapato social de couro com acabamento em verniz",
+            "precoDolar": 300.00
         }
     ]
 }
