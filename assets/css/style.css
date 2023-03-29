@@ -76,18 +76,12 @@ footer a:hover {
 
 /************************FOOTER************************/
 footer {
-    background-color: #e0b525;
+    background-color: #e4c359;
     height: 200px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-label {
-    font-size: 20px;
-    color: #008000;
-    font-weight: 400;
 }
 
 .div-footer-content {
@@ -97,53 +91,11 @@ label {
     padding: 15px;
 }
 
-.form-login {
-    display: flex;
-    flex-direction: column;
-    /* margin-left: 100px; */
-}
-
-.input-text-login {
-    width: 200px;
-    height: 30px;
-    border: 2px solid #008000;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 3px;
-}
-
-.input-senha-login {
-    width: 200px;
-    height: 30px;
-    border: 2px solid #008000;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 3px;
-}
-
-.input-submit-login {
-    width: 75px;
-    border-radius: 10px;
-    padding: 5px;
-    border: 2px solid #008000;
-    color: #008000;
-    margin-top: 3px;
-}
-
-.input-submit-login:hover {
-    transition: 0.4s all;
-    background-color: #008000;
-    color: aliceblue;
-    cursor: pointer;
-}
-
 .redes-sociais-footer {
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-
     transform: translateY(0px);
     animation: float 5s ease-in-out infinite;
 }
@@ -217,7 +169,7 @@ p {
     }
 }
 
-/**************************MAIN**************************/
+/**************************MAIN index**************************/
 main {
     margin-top: 50px;
 }
@@ -284,7 +236,6 @@ div a:hover {
     transition: 400ms;
     color: #ffffff;
 }
-
 /********************************************************/
 
 
@@ -329,6 +280,15 @@ div a:hover {
     transition: 300ms;
     background-color: white;
     color: orange;
+}
+
+.input-cep{
+    outline: none;
+    border: none;
+}
+
+.comprar{
+    border: none;
 }
 
 /********************************************************/
