@@ -4,6 +4,7 @@
 // CEP Sudeste - 24855272
 // CEP Centro-Oeste - 70650171
 // CEP Norte - 67013218
+// CEP Mogi - 08738070
 
 var desconto;
 
@@ -103,7 +104,7 @@ function confirmaCompra(precoReaisValor) {
     console.log(precoReaisValor);
     Swal.fire({
         title: 'Confirmação de compra',
-        text: `Pelo seu CEP vimos que você tem direito a ${(desconto * 100).toFixed(0)}% de desconto no frete de 1000 R$, sendo o preço de ${precoReaisValor}R$ para ${(parseFloat(precoReaisValor) + (parseFloat(1 - desconto) * 1000)).toFixed(2)}R$`,
+        text: `Pelo seu CEP vimos que você tem direito a ${(desconto * 100).toFixed(0)}% de desconto no frete de 1000 R$, sendo o preço de ${precoReaisValor}R$ para ${(parseFloat(precoReaisValor) + (parseFloat(1 - desconto) * 1000))}R$`,
         icon: 'info',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
